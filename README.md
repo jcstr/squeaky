@@ -1,4 +1,7 @@
-# squeaky
+ ▄▄▄▄  ▄▄▄  ▄▄ ▄▄ ▄▄▄▄▄  ▄▄▄  ▄▄ ▄▄ ▄▄ ▄▄
+███▄▄ ██▀██ ██ ██ ██▄▄  ██▀██ ██▄█▀ ▀███▀
+▄▄██▀ ▀███▀ ▀███▀ ██▄▄▄ ██▀██ ██ ██   █
+         ▀▀
 
 Keep your Arch Linux squeaky clean.
 
@@ -32,7 +35,7 @@ sudo make install
 squeaky dry
 
 # Actually clean
-sudo squeaky clean
+squeaky clean
 
 # Skip specific cleaners
 squeaky clean --skip "Pacman Cache,Journal Logs"
@@ -43,6 +46,9 @@ squeaky dry -v
 # Use custom config
 squeaky dry --config ~/my-squeaky.yaml
 ```
+
+[![image](https://i.imgur.com/oB6M3of.png)]
+
 
 ## Configuration
 
