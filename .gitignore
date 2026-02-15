@@ -1,0 +1,5 @@
+squeaky
+*.exe
+dist/
+.idea/
+.vscode/

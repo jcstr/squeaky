@@ -1,0 +1,22 @@
+# Squeaky configuration
+# Copy to ~/.config/squeaky/squeaky.yaml
+
+# Number of package versions to keep in pacman cache
+pacman_keep: 2
+
+# Delete ~/.cache files older than this many days
+cache_max_days: 30
+
+# Vacuum journal logs older than this
+journal_max_age: "2weeks"
+
+# Delete /tmp files older than this many days
+tmp_max_days: 7
+
+# Cleaners to skip (by name)
+# skip:
+#   - "Pacman Cache"
+#   - "Orphaned Packages"
+#   - "User Cache"
+#   - "Journal Logs"
+#   - "Temp Files"
