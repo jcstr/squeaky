@@ -1,11 +1,11 @@
 ```
-▄▄▄▄  ▄▄▄  ▄▄ ▄▄ ▄▄▄▄▄  ▄▄▄  ▄▄ ▄▄ ▄▄ ▄▄
+ ▄▄▄▄  ▄▄▄  ▄▄ ▄▄ ▄▄▄▄▄  ▄▄▄  ▄▄ ▄▄ ▄▄ ▄▄
 ███▄▄ ██▀██ ██ ██ ██▄▄  ██▀██ ██▄█▀ ▀███▀
 ▄▄██▀ ▀███▀ ▀███▀ ██▄▄▄ ██▀██ ██ ██   █
          ▀▀
 ```
 
-## Keep your Arch Linux squeaky clean.
+## Keep your Arch Linux clean.
 
 Squeaky finds and removes stale package caches, orphaned packages, old journal logs, and crusty temp files — safely, with a dry-run-first approach.
 
@@ -49,7 +49,7 @@ squeaky dry -v
 squeaky dry --config ~/my-squeaky.yaml
 ```
 
-[![image](https://i.imgur.com/oB6M3of.png)]
+![image](https://i.imgur.com/oB6M3of.png)
 
 
 ## Configuration
