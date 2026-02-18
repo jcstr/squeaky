@@ -8,16 +8,20 @@ import (
 )
 
 var (
-	title   = color.New(color.FgCyan, color.Bold)
-	success = color.New(color.FgGreen)
-	warning = color.New(color.FgYellow)
-	fail    = color.New(color.FgRed)
+	banner  = color.New(color.FgCyan)
+	title   = color.New(color.FgGreen, color.Bold)
+	label   = color.New(color.FgHiWhite, color.Bold)
+	would   = color.New(color.FgRed, color.Bold)
+	freeing = color.New(color.FgGreen, color.Bold)
+	success = color.New(color.FgBlue, color.Bold)
+	warning = color.New(color.FgYellow, color.Bold)
+	fail    = color.New(color.FgRed, color.Bold)
 	dim     = color.New(color.FgHiBlack)
 )
 
 // Banner prints the squeaky banner.
 func Banner() {
-	title.Println(`                                          
+	banner.Println(` 
  ▄▄▄▄  ▄▄▄  ▄▄ ▄▄ ▄▄▄▄▄  ▄▄▄  ▄▄ ▄▄ ▄▄ ▄▄ 
 ███▄▄ ██▀██ ██ ██ ██▄▄  ██▀██ ██▄█▀ ▀███▀ 
 ▄▄██▀ ▀███▀ ▀███▀ ██▄▄▄ ██▀██ ██ ██   █   
@@ -33,7 +37,8 @@ func DryRunBanner() {
 
 // Header prints a section header for a cleaner.
 func Header(name string) {
-	title.Printf("==> %s\n", name)
+	title.Print("==> ")
+	label.Printf("%s\n", name)
 }
 
 // PrintResult prints the result of a single cleaner.
@@ -68,9 +73,11 @@ func Summary(results []*cleaner.Result, dryRun bool) {
 	fmt.Println()
 	title.Println("--- Summary ---")
 	if dryRun {
-		fmt.Printf("Would clean %d items, freeing ~%s\n",
-			totalItems, cleaner.BytesToHuman(totalBytes))
-		warning.Println("Run squeaky clean to execute.")
+		fmt.Printf("Would clean ")
+		would.Printf("%d", totalItems)
+		fmt.Print(" items, freeing ~")
+		freeing.Printf("%s\n",cleaner.BytesToHuman(totalBytes))
+		warning.Println("Run `squeaky clean` to execute.")
 	} else {
 		success.Printf("Cleaned %d items, freed %s\n",
 			totalItems, cleaner.BytesToHuman(totalBytes))
