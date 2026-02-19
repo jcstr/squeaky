@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Update system and install Go
-        run: pacman -Syu --noconfirm git go
+        run: pacman -Syu --noconfirm git go gcc
 
       - uses: actions/checkout@v4
 
@@ -33,4 +33,6 @@ jobs:
         run: go build -buildvcs=false -o squeaky .
 
       - name: Test
+        env:
+          CGO_ENABLED: 1
         run: go test -race ./...
