@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: Test & Build
+    runs-on: ubuntu-latest
+    container:
+      image: archlinux:latest
+
+    steps:
+      - name: Update system and install Go
+        run: pacman -Syu --noconfirm git go
+
+      - uses: actions/checkout@v4
+
+      - name: Cache Go modules
+        uses: actions/cache@v4
+        with:
+          path: /root/go/pkg/mod
+          key: arch-go-${{ hashFiles('**/go.sum') }}
+          restore-keys: arch-go-
+
+      - name: Download dependencies
+        run: go mod download
+
+      - name: Build
+        run: go build -o squeaky .
+
+      - name: Test
+        run: go test -race ./...
