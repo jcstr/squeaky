@@ -30,7 +30,7 @@ jobs:
         run: go mod download
 
       - name: Build
-        run: go build -o squeaky .
+        run: go build -buildvcs=false -o squeaky .
 
       - name: Test
         run: go test -race ./...
