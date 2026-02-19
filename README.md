@@ -4,6 +4,7 @@
 ▄▄██▀ ▀███▀ ▀███▀ ██▄▄▄ ██▀██ ██ ██   █
          ▀▀
 ```
+![CI](https://github.com)
 
 ## Keep your Arch Linux clean.
 
@@ -49,7 +50,7 @@ squeaky dry -v
 squeaky dry --config ~/my-squeaky.yaml
 ```
 
-![image](https://i.imgur.com/oB6M3of.png)
+![image](https://i.imgur.com/Gofjg3J.png)
 
 
 ## Configuration
