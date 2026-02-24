@@ -1,10 +1,12 @@
+[![CI](https://github.com/jcstr/squeaky/actions/workflows/go.yml/badge.svg?branch=main)](https://github.com/jcstr/squeaky/actions/workflows/go.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/jcstr/squeaky)](https://goreportcard.com/report/github.com/jcstr/squeaky)
+
 ```
  ▄▄▄▄  ▄▄▄  ▄▄ ▄▄ ▄▄▄▄▄  ▄▄▄  ▄▄ ▄▄ ▄▄ ▄▄
 ███▄▄ ██▀██ ██ ██ ██▄▄  ██▀██ ██▄█▀ ▀███▀
 ▄▄██▀ ▀███▀ ▀███▀ ██▄▄▄ ██▀██ ██ ██   █
          ▀▀
 ```
-![CI](https://github.com)
 
 ## Keep your Arch Linux clean.
 
